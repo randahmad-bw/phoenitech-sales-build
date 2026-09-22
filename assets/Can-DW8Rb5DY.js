@@ -1,1 +1,0 @@
-import"./rolldown-runtime-QTnfLwEv.js";import{f as e,h as t}from"./react-DtZSiELj.js";import{Jt as n}from"./index-BUkuEuIO.js";t();var r=e(),i=({do:e,all:t=!1,fallback:i=null,children:a})=>{let{can:o,canAll:s}=n();return(0,r.jsx)(r.Fragment,{children:(t&&Array.isArray(e)?s(e):o(e))?a:i})};export{i as t};
