@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="نظام الإدارة العامة لشركة فوني تيك — الموظفون والعقود والدوام والتقارير - PhoeniTech Company Management Platform" />
+    <title>نظام الإدارة العامة - PhoeniTech</title>
+
+    <!-- Installable app: manifest + theme. -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <!-- Matches `--pt-surface` in the dark theme, so the phone's status bar
+         blends into the app rather than framing it. -->
+    <meta name="theme-color" content="#0b0c0e" />
+
+    <!--
+      iOS ignores the manifest entirely: these three tags are what make
+      "Add to Home Screen" open full-screen with the right icon and title,
+      instead of a Safari tab.
+    -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="فوني تيك" />
+    <link rel="apple-touch-icon" href="/logo_mark.png" />
+
+    <!--
+      Rubik, self-hosted. The @font-face rules live in src/styles/fonts.css and
+      the two .woff2 files are served from this origin, so the first paint no
+      longer waits on two round trips to Google's font servers.
+    -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/rubik-arabic.woff2" crossorigin />
+    <script type="module" crossorigin src="/assets/index-ByYeVvA0.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-QTnfLwEv.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-DtZSiELj.js">
+    <link rel="modulepreload" crossorigin href="/assets/createLucideIcon-C9GugGe4.js">
+    <link rel="modulepreload" crossorigin href="/assets/Page-DhBK8mjS.js">
+    <link rel="modulepreload" crossorigin href="/assets/authStore-CseVJVdS.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-B63spWBo.css">
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--
+      Theme and direction, applied before the first paint.
+
+      React sets both, but only after the bundle has parsed and mounted — so
+      a light-theme user opened the app on a black screen for a few hundred
+      milliseconds and then watched it flash white. Reading the same two keys
+      here costs nothing and removes the flash; the store stays the source of
+      truth afterwards.
+    -->
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem('theme') || 'light';
+          if (theme === 'light') document.documentElement.classList.add('light');
+
+          var lang = localStorage.getItem('lang') || 'ar';
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        } catch (e) {
+          /* Private mode blocks storage; the defaults in the markup stand. */
+        }
+      })();
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,1 @@
+var e=(e,t)=>t===`ar`?e.name_ar:e.name_en,t=e=>`leave.status_${e}`;export{e as n,t};

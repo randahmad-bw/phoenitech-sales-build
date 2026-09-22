@@ -1,0 +1,41 @@
+{
+  "name": "نظام الإدارة العامة — فوني تيك",
+  "short_name": "فوني تيك",
+  "description": "تسجيل الحضور والانصراف وإدارة أعمال الشركة",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0f1117",
+  "theme_color": "#0f1117",
+  "icons": [
+    {
+      "src": "/logo_mark.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo_mark.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "الحضور والانصراف",
+      "short_name": "الحضور",
+      "description": "تسجيل الدخول أو الخروج",
+      "url": "/attendance"
+    }
+  ]
+}
