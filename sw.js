@@ -1,4 +1,4 @@
-/*
+cd/*
  * Minimal service worker.
  *
  * Its job is to make the app installable and to survive a flaky connection on
